@@ -7,9 +7,9 @@ app.use(express.static("views"));
 
 app.get('/', function (req, res) {
   try {
-    res.render('home')s
+    res.render('home');
   } catch (e) {
-    res.send('page render error')
+    res.send('page render error');
   }
 
 })
