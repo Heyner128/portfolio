@@ -1,15 +1,13 @@
 const express = require('express');
-var path = require('path');
-   
 const app = express();
 const PORT = 3000;
 
 app.set('view engine','ejs');
-app.use(express.static("../porfolio/views"));
+app.use(express.static("views"));
 
 app.get('/', function (req, res) {
   try {
-    res.render('home')
+    res.render('home')s
   } catch (e) {
     res.send('page render error')
   }
