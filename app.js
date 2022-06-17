@@ -1,14 +1,17 @@
-const http = require('http');
+const express = require('express');
+const app = express();
 
-const hostname = 'localhost';
-const port = 3000;
+app.set('view engine','ejs')
+app.use(express.static("views"))
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World!\n update? another update 11');
-});
+app.get('/', function (req, res) {
+  try {
+    res.render('home')
+  } catch (e) {
+    res.send('page render error')
+  }
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+})
+
+
+
