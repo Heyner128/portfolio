@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3000;
 
 app.set('view engine','ejs');
-app.use(express.static(path.join(__dirname, "views")));
+app.use(express.static(path.join(__dirname, "/porfolio/views")));
 app.get('/', function (req, res) {
   try {
     res.render('home');
