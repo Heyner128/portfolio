@@ -1,10 +1,10 @@
 const express = require('express');
-const path = require('path')
+const path = require('path');
 const app = express();
 const PORT = 3000;
 
 app.set('view engine','ejs');
-app.use(express.static("views"));
+app.use(express.static(path.join(__dirname, "views")));
 app.get('/', function (req, res) {
   try {
     res.render('home');
