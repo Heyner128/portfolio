@@ -10,16 +10,19 @@
     <title>Heyner Cuevas Portfolio</title>
 </head>
 <body>
-   <nav class="flex flex-row px-5 py-2">
-        <div class="flex flex-row gap-7">
-            <button class="material-symbols-outlined h-10" style="font-size: 2rem" onclick="toggleMenu()">menu</button>
-            <ul class="list-none w-0 scale-x-0 transition-all duration-75 origin-left mt-10">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact"> Contact </a></li>
-            </ul>
+   <nav class="flex flex-row">
+        <div id="sidebar" class="fixed h-full">
+            <div class="fixed h-full w-60 bg-white pt-3">
+                <button class="material-symbols-outlined h-10 pl-5" style="font-size: 2rem" onclick="toggleMenu()">menu</button>
+                <div id="sidebar-content" class="flex flex-col w-0 scale-x-0 transition-all duration-75 origin-left">
+                    <button class="h-10 active:bg-gray-500 text-center" onclick="location.href='#Home'">Home</button>
+                    <button class="h-10 active:bg-gray-500 text-center" onclick="location.href='#Projects'">Projects</button>
+                    <button class="h-10 active:bg-gray-500 text-center" onclick="location.href='#Contact'">Contact</button>
+                </div>
+            </div>
+            
         </div> 
-        <div class="w-full text-center" style="font-family">
+        <div class="w-full text-center pt-3">
             Heyner Cuevas
         </div>
    </nav>
