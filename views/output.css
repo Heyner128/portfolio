@@ -578,6 +578,10 @@ html {
   height: 0.5rem;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -615,10 +619,6 @@ html {
 
 .text-center {
   text-align: center;
-}
-
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .transition-all {
