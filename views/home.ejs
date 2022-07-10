@@ -5,26 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    
     <title>Heyner Cuevas Portfolio</title>
 </head>
 <body>
-   <nav class="flex flex-row">
-        <div id="sidebar" class="fixed h-full">
-            <div class="fixed h-full w-60 bg-white pt-3">
-                <button class="material-symbols-outlined h-10 pl-5" style="font-size: 2rem" onclick="toggleMenu()">menu</button>
-                <div id="sidebar-content" class="flex flex-col w-0 scale-x-0 transition-all duration-75 origin-left">
-                    <button class="h-10 active:bg-gray-500 text-center" onclick="location.href='#Home'">Home</button>
-                    <button class="h-10 active:bg-gray-500 text-center" onclick="location.href='#Projects'">Projects</button>
-                    <button class="h-10 active:bg-gray-500 text-center" onclick="location.href='#Contact'">Contact</button>
+   <nav class="flex flex-row justify-between">
+
+        <button class=" h-8 ml-5 mt-2 z-20 w-8" onclick="toggleMenu()">
+            <svg viewBox="0 0 100 100">
+                <line x1="10" x2="90" y1="25" y2="25" stroke="black" stroke-width="10%" stroke-linecap="round"/>
+                <line x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10%" stroke-linecap="round"/>
+                <line x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10%" stroke-linecap="round"/>
+            </svg>       
+        </button>
+
+        
+        
+        <div id="sidebar" class="fixed h-full w-0 scale-x-0 transition-all z-10">
+            <div id="sidebar-div" class="fixed h-full w-60 bg-white pt-3 z-20">
+                <div id="sidebar-content" class="flex flex-col duration-75 origin-left pt-10">
+                    <button class="h-10 active:bg-gray-500 text-center" onclick="location.href='#Home'; toggleMenu()">Home</button>
+                    <button class="h-10 active:bg-gray-500 text-center" onclick="location.href='#Projects'; toggleMenu()">Projects</button>
+                    <button class="h-10 active:bg-gray-500 text-center" onclick="location.href='#Contact'; toggleMenu()">Contact</button>
                 </div>
             </div>
-            
+            <div class="fixed h-full w-full z-10 bg-black opacity-40" onclick="toggleMenu()"></div>
         </div> 
+        
         <div class="w-full text-center pt-3">
             Heyner Cuevas
         </div>
+        
    </nav>
    <script src="main.js"></script>
 </body>
